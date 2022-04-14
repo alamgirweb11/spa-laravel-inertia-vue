@@ -1,0 +1,1 @@
+## SPA developed with laravel(breeze), inertia and vue.
