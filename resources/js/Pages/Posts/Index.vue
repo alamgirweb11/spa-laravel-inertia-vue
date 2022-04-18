@@ -14,20 +14,20 @@
                         <table class="min-w-full divide-y divide-gray-200 border">
                             <thead>
                                 <tr>
-                                    <th class="text-left px-6 py-4">SL</th>
-                                    <th class="text-left px-6 py-4">Title</th>
-                                    <th class="text-left px-6 py-4">Content</th>
-                                    <th class="text-left px-6 py-4">Created At</th>
+                                    <th class="text-left px-6 py-4 border">SL</th>
+                                    <th class="text-left px-6 py-4 border">Title</th>
+                                    <th class="text-left px-6 py-4 border">Content</th>
+                                    <th class="text-left px-6 py-4 border">Created At</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="(post, index) in posts" :key="post.id">
-                                    <td class="px-6 py-5 whitespace-no-wrap">{{ index+1 }}</td>
-                                    <td class="px-6 py-5 whitespace-no-wrap">{{ post.title }}</td>
-                                    <td class="px-6 py-5 whitespace-no-wrap">
+                                    <td class="px-6 py-5 whitespace-no-wrap border">{{ index+1 }}</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap border">{{ post.title }}</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap border">
                                       {{ post.content }}
                                     </td>
-                                    <td class="px-6 py-5 whitespace-no-wrap">{{ new Date(post.created_at).toLocaleString() }}</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap border">{{ post.created_at }}</td>
                                 </tr>
                             </tbody>
                         </table>

@@ -23790,28 +23790,28 @@ var _hoisted_6 = {
 };
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "text-left px-6 py-4"
+  "class": "text-left px-6 py-4 border"
 }, "SL"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "text-left px-6 py-4"
+  "class": "text-left px-6 py-4 border"
 }, "Title"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "text-left px-6 py-4"
+  "class": "text-left px-6 py-4 border"
 }, "Content"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "text-left px-6 py-4"
+  "class": "text-left px-6 py-4 border"
 }, "Created At")])], -1
 /* HOISTED */
 );
 
 var _hoisted_8 = {
-  "class": "px-6 py-5 whitespace-no-wrap"
+  "class": "px-6 py-5 whitespace-no-wrap border"
 };
 var _hoisted_9 = {
-  "class": "px-6 py-5 whitespace-no-wrap"
+  "class": "px-6 py-5 whitespace-no-wrap border"
 };
 var _hoisted_10 = {
-  "class": "px-6 py-5 whitespace-no-wrap"
+  "class": "px-6 py-5 whitespace-no-wrap border"
 };
 var _hoisted_11 = {
-  "class": "px-6 py-5 whitespace-no-wrap"
+  "class": "px-6 py-5 whitespace-no-wrap border"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -23834,7 +23834,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.content), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date(post.created_at).toLocaleString()), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.created_at), 1
         /* TEXT */
         )]);
       }), 128
