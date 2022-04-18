@@ -11,31 +11,23 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <table class="table-auto">
+                        <table class="min-w-full divide-y divide-gray-200 border">
                             <thead>
                                 <tr>
-                                    <th>SL</th>
-                                    <th>Title</th>
-                                    <th>Content</th>
-                                    <th>Created At</th>
+                                    <th class="text-left px-6 py-4">SL</th>
+                                    <th class="text-left px-6 py-4">Title</th>
+                                    <th class="text-left px-6 py-4">Content</th>
+                                    <th class="text-left px-6 py-4">Created At</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Malcolm Lockyer</td>
-                                    <td>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Maxime mollitia,
-                                        molestiae quas vel sint commodi
-                                        repudiandae consequuntur voluptatum
-                                        laborum numquam blanditiis harum
-                                        quisquam eius sed odit fugiat iusto fuga
-                                        praesentium optio, eaque rerum!
-                                        Provident similique accusantium nemo
-                                        autem.
+                                <tr v-for="(post, index) in posts" :key="post.id">
+                                    <td class="px-6 py-5 whitespace-no-wrap">{{ index+1 }}</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap">{{ post.title }}</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap">
+                                      {{ post.content }}
                                     </td>
-                                    <td>18-04-2022 11:02 pm</td>
+                                    <td class="px-6 py-5 whitespace-no-wrap">{{ new Date(post.created_at).toLocaleString() }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -49,6 +41,9 @@
 import AppLayout from "../../Layouts/Authenticated.vue";
 import { Head } from "@inertiajs/inertia-vue3";
 export default {
+    props:{
+         posts: Object
+    },
     components: {
         AppLayout,
         Head,
