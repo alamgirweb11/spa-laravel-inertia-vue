@@ -31,4 +31,6 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('posts', \App\Http\Controllers\PostController::class);
 });
 
+Route::inertia('about', 'About')->name('about');
+
 require __DIR__.'/auth.php';
