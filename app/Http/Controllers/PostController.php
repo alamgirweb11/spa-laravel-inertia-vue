@@ -85,6 +85,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->back()->with(['alert_type' => 'Success', 'message' => 'Post successfully deleted.']);
     }
 }

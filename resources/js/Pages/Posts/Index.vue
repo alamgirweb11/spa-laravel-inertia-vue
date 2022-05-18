@@ -19,6 +19,7 @@
                                     <th class="text-left px-6 py-4 border">Title</th>
                                     <th class="text-left px-6 py-4 border">Content</th>
                                     <th class="text-left px-6 py-4 border">Created At</th>
+                                    <th class="text-left px-6 py-4 border">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,7 +30,14 @@
                                       {{ post.content }}
                                     </td>
                                     <td class="px-6 py-5 whitespace-no-wrap border">{{ post.created_at }}</td>
-                                </tr>
+                                    <td class="px-6 py-5 whitespace-no-wrap border">
+                                    <button type="button" @click.prevent="destroy(post.id)"
+                                    class="px-4 py-1 mx-2 text-sm bg-red-600 text-white font-semibold rounded border"
+                                >
+                                    Delete
+                                </button>
+                                    </td>
+                               </tr>
                             </tbody>
                         </table>
                     </div>
@@ -41,6 +49,7 @@
 <script>
 import AppLayout from "../../Layouts/Authenticated.vue";
 import { Head, Link } from "@inertiajs/inertia-vue3";
+import { Inertia } from '@inertiajs/inertia';
 export default {
     props:{
          posts: Object
@@ -50,5 +59,15 @@ export default {
         Head,
         Link
     },
+
+    setup(){
+          const destroy = (id) => {
+              if(confirm('Are You Sure?')){
+                  Inertia.delete(route('posts.destroy', id))
+              }
+          }
+
+          return {destroy}
+    }
 };
 </script>
