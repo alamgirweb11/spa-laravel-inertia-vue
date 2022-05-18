@@ -31,6 +31,11 @@
                                     </td>
                                     <td class="px-6 py-5 whitespace-no-wrap border">{{ post.created_at }}</td>
                                     <td class="px-6 py-5 whitespace-no-wrap border">
+                                    <a :href="route('posts.edit', post.id)"
+                                    class="px-4 py-1 mx-2 text-sm bg-blue-600 text-white font-semibold rounded border"
+                                >
+                                    Edit
+                                </a>
                                     <button type="button" @click.prevent="destroy(post.id)"
                                     class="px-4 py-1 mx-2 text-sm bg-red-600 text-white font-semibold rounded border"
                                 >

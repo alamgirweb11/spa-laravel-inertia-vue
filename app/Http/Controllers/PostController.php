@@ -6,6 +6,7 @@ use App\Http\Requests\StorePostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
@@ -62,7 +63,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+          return inertia('Posts/Edit', compact('post'));
     }
 
     /**
@@ -72,9 +73,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(StorePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->validated());
+        return redirect()->back()->with(['alert_type' => 'Success', 'message' => 'Post successfully updated.']);
     }
 
     /**
