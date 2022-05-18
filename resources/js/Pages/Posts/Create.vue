@@ -83,6 +83,6 @@ export default {
               content: ''
          })
          return {form}
-    }
+    },
 };
 </script>

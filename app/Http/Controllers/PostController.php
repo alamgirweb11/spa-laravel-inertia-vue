@@ -39,9 +39,8 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        sleep(2);
         Post::create($request->validated());
-        return redirect()->route('posts.index');
+        return redirect()->back()->with(['alert_type' => 'Success', 'message' => 'Post successfully submitted.']);
     }
 
     /**
