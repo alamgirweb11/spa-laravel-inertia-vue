@@ -11,7 +11,8 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <table class="min-w-full divide-y divide-gray-200 border">
+                        <a :href="route('posts.create')" class="w-4 bg-sky-500 p-2 text-white rounded-md">Create New Post</a>
+                        <table class="min-w-full divide-y divide-gray-200 border mt-4">
                             <thead>
                                 <tr>
                                     <th class="text-left px-6 py-4 border">SL</th>
@@ -39,7 +40,7 @@
 </template>
 <script>
 import AppLayout from "../../Layouts/Authenticated.vue";
-import { Head } from "@inertiajs/inertia-vue3";
+import { Head, Link } from "@inertiajs/inertia-vue3";
 export default {
     props:{
          posts: Object
@@ -47,6 +48,7 @@ export default {
     components: {
         AppLayout,
         Head,
+        Link
     },
 };
 </script>
